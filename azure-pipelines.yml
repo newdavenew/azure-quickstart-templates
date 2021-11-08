@@ -10,7 +10,7 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'quickstarts/microsoft.web/webapp-basic-linux'
+    SourceFolder: 'quickstarts/microsoft.compute/vm-simple-windows'
 #quickstarts/microsoft.compute/vm-simple-windows/
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
