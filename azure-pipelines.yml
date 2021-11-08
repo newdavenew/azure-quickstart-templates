@@ -10,8 +10,10 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'quickstarts/microsoft.compute/vm-simple-windows'
+    SourceFolder: 'quickstarts/microsoft.network/vnet-to-vnet/azuredeploy.parameters.json'
+# 'quickstarts/microsoft.compute/vm-simple-windows'
 #quickstarts/microsoft.compute/vm-simple-windows/
+#microsoft.network/vnet-to-vnet/azuredeploy.parameters.json
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
@@ -26,7 +28,7 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.json'
     csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
-    overrideParameters: '-webAppName mytest123456'
+#    overrideParameters: '-webAppName mytest123456'
     #-administratorLogin $(adminUser) -administratorLoginPassword $(ARM_PASS)'
     deploymentMode: 'Incremental'
 
