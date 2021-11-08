@@ -10,7 +10,7 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'quickstarts/microsoft.network/vnet-to-vnet'
+    SourceFolder: 'quickstarts/microsoft.network/azure-bastion/'
 # 'quickstarts/microsoft.compute/vm-simple-windows'
 #quickstarts/microsoft.compute/vm-simple-windows/
 #microsoft.network/vnet-to-vnet/azuredeploy.parameters.json
@@ -28,7 +28,7 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.json'
     csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
-#    overrideParameters: '-webAppName mytest123456'
+    overrideParameters: '-bastionHostName mytest123456'
     #-administratorLogin $(adminUser) -administratorLoginPassword $(ARM_PASS)'
     deploymentMode: 'Incremental'
 
