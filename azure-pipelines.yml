@@ -10,7 +10,7 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'quickstarts/microsoft.network/vnet-to-vnet/azuredeploy.parameters.json'
+    SourceFolder: 'quickstarts/microsoft.network/vnet-to-vnet/azuredeploy'
 # 'quickstarts/microsoft.compute/vm-simple-windows'
 #quickstarts/microsoft.compute/vm-simple-windows/
 #microsoft.network/vnet-to-vnet/azuredeploy.parameters.json
